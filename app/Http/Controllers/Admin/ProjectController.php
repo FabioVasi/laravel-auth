@@ -14,7 +14,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::all();
+        $projects = Project::orderByDesc('id')->paginate(12);
         //dd($projects);
         return view('admin.projects.index', compact('projects'));
     }
@@ -24,7 +24,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.projects.create', compact('projects'));
     }
 
     /**
@@ -32,7 +32,7 @@ class ProjectController extends Controller
      */
     public function store(StoreProjectRequest $request)
     {
-        //
+        dd($request->all());
     }
 
     /**
@@ -40,7 +40,7 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        //
+        dd($project);
     }
 
     /**
