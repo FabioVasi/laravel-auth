@@ -14,7 +14,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        dd('cioa sono io il project controller index');
+        dd('ciao sono io il project controller index');
     }
 
     /**
