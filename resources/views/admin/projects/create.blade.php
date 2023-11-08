@@ -7,13 +7,13 @@
 <h1>Create Project</h1>
 
 @if($errors->any())
-<div class="alert alert-danger" role="alert">
-    <ul>
-        @foreach ($errors->all() as $error)
-        <li>{{$error}}</li>
-        @endeforeach
-    </ul>
-</div>
+    <div class="alert alert-danger" role="alert">
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{$error}}</li>
+            @endforeach
+        </ul>
+    </div>
 @endif
 
 <div class="card-shadow">
