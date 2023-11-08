@@ -6,6 +6,16 @@
 
 <h1>Create Project</h1>
 
+@if($errors->any())
+<div class="alert alert-danger" role="alert">
+    <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{$error}}</li>
+        @endeforeach
+    </ul>
+</div>
+@endif
+
 <div class="card-shadow">
     <div class="card-body">
 
@@ -32,7 +42,7 @@
             <button type="submit" class="btn btn-primary">Save</button>
 
         </form>
-        
+
     </div>
 </div>
 

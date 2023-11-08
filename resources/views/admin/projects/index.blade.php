@@ -4,6 +4,13 @@
 
 @section('content')
 
+@if(session('message'))
+<div class="alert alert-success alert-dismissible  fade show" role="alert">
+    <button type="button" class="btn-close" data_bs_dismiss="alert" aria-label="Close"></button>
+    <strong>Message:</strong>{{session('message')}}
+</div>
+@endif
+
 <h1>All Projects Post</h1>
 
 <div class="table-responsive-sm">
