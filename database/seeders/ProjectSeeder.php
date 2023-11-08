@@ -18,6 +18,8 @@ class ProjectSeeder extends Seeder
         for ($i=0; $i < 10; $i++) { 
             $project = new Project();
             $project->title = $faker->realText(50);
+            $project->image = 'placeholders/' . $faker->image('public/storage/placeholders', category: 'Projects', fullPath: false);
+            //dd($project->image);
             $project->slug = Str::slug($project->title, '-');
             $project->content = $faker->realText(50);
             $project->save();
