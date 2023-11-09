@@ -25,16 +25,22 @@
             </tr>
         </thead>
         <tbody class="table-group-divider">
+
             @forelse($projects as $project)
-            <tr class="table-primary">
-                <td class="row">{{$project->id}}</td>
+            <tr class="table-secondary">
+                <td>{{$project->id}}</td>
                 <td>
                     @if($project->image)
                     <img src="{{asset('storage/' . $project->image)}}" alt="">
+                    @else
+                    N/A
                     @endif
                 </td>
                 <td>{{$project->title}}</td>
-                <td>View/Edit/Delete</td>
+                <td>
+                    <a href="{{route('admin.projects.show', $project)}}" class="btn btn-primary">View</a>
+                    View/Edit/Delete
+                </td>
             </tr>
             @empty
 
