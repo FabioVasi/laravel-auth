@@ -24,30 +24,20 @@
 
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
-                <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror" placeholder="Type the project title here" aria-describedby="titleHelp" value="{{old('title')}}">
+                <input type="text" name="title" id="title" class="form-control" placeholder="Type the project title here" aria-describedby="titleHelp">
                 <small id="titleHelp" class="text-muted">Type your project title</small>
             </div>
-            @error('title')
-                <p class="text-danger">{{$message}}</p>
-            @enderrorder
 
             <div class="mb-3">
                 <label for="image" class="form-label">Choose File</label>
-                <input type="file" name="image" id="image" class="form-control @error('image') is-invalid @enderror" placeholder="Choose a file" aria-describedby="fileHelp">
+                <input type="file" name="image" id="image" class="form-control" placeholder="Choose a file" aria-describedby="fileHelp">
                 <small id="fileHelp" class="form-text">Add image max: 512Kb</small>
             </div>
-            @error('image')
-                <p class="text-danger">{{$message}}</p>
-            @enderrorder
 
             <div class="mb-3">
-                <label for="content" class="form-label">Content</label>
-                <textarea class="form-control @error('content') is-invalid @enderror" name="content" id="content" rows="3">{{old('content')}}</textarea>
-                <small id="contentHelp" class="form-text">Type your content</small>
+                <label for="title" class="form-label">Content</label>
+                <textarea class="form-control" name="content" id="content" rows="3"></textarea>
             </div>
-            @error('content')
-                <p class="text-danger">{{$message}}</p>
-            @enderrorder
 
             <button type="submit" class="btn btn-primary">Save</button>
 

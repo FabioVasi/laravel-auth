@@ -13,6 +13,8 @@
 
 <h1>All Projects Post</h1>
 
+<a href="{{route('admin.projects.create')}}" class="btn btn-primary rounded-pill">Add</a>
+
 <div class="table-responsive-sm">
     <table class="table table-striped table-hover table-borderless table-light table-middle">
         <thead class="table-light">
@@ -39,7 +41,8 @@
                 <td>{{$project->title}}</td>
                 <td>
                     <a href="{{route('admin.projects.show', $project)}}" class="btn btn-primary">View</a>
-                    View/Edit/Delete
+                    <a href="{{route('admin.projects.edit', $project)}}" class="btn btn-secondary">Edit</a>
+                    /Delete
                 </td>
             </tr>
             @empty
