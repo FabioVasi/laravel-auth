@@ -29,7 +29,7 @@
             </div>
             @error('title')
                 <p class="text-danger">{{$message}}</p>
-            @enderrorder
+            @enderror
 
             <div class="mb-3">
                 <label for="image" class="form-label">Choose File</label>
@@ -38,7 +38,7 @@
             </div>
             @error('image')
                 <p class="text-danger">{{$message}}</p>
-            @enderrorder
+            @enderror
 
             <div class="mb-3">
                 <label for="content" class="form-label">Content</label>
@@ -47,7 +47,7 @@
             </div>
             @error('content')
                 <p class="text-danger">{{$message}}</p>
-            @enderrorder
+            @enderror
 
             <button type="submit" class="btn btn-primary">Save</button>
 
