@@ -70,7 +70,22 @@ class ProjectController extends Controller
      */
     public function update(UpdateProjectRequest $request, Project $project)
     {
-        dd($request->all());
+        $val_data = $request->validated();
+
+        if ($request->has('image')) {
+            // image update
+            $path = Storage::put('projects_image', $request->image);
+            $val_data['image'] = $path;
+        }
+
+        if (!Str::is($project->getOriginal('title'), $request->title)) {
+            
+            $val_data['slug'] = $project->generateSlug($request->title);
+        }
+
+        $project->update($val_data);
+
+        return to_route('admin.projects.index')->with('message', 'Post updated successfully');
     }
 
     /**
