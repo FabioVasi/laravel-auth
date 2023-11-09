@@ -39,7 +39,7 @@
             @empty
 
             @endforelse
-            {{$projects->links()}}
+            {{$projects->links('pagination::bootstrap-5')}}
         </tbody>
         <tfoot>
 
