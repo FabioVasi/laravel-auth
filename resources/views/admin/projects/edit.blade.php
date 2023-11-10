@@ -42,6 +42,24 @@
             @enderror
 
             <div class="mb-3">
+                <label for="github" class="form-label">Github</label>
+                <input type="text" name="github" id="github" class="form-control @error('github') is-invalid @enderror" placeholder="Type the project github link here" aria-describedby="githubHelp" value="{{old('github', $project->github)}}">
+                <small id="githubHelp" class="text-muted">Type your project github</small>
+            </div>
+            @error('title')
+                <p class="text-danger">{{$message}}</p>
+            @enderror
+
+            <div class="mb-3">
+                <label for="second_link" class="form-label">Second Link</label>
+                <input type="text" name="second_link" id="second_link" class="form-control @error('second_link') is-invalid @enderror" placeholder="Type the project second_link here" aria-describedby="second_linkHelp" value="{{old('second_link', $project->second_link)}}">
+                <small id="second_linkHelp" class="text-muted">Type your project second link here</small>
+            </div>
+            @error('title')
+                <p class="text-danger">{{$message}}</p>
+            @enderror
+
+            <div class="mb-3">
                 <label for="content" class="form-label">Content</label>
                 <textarea class="form-control @error('content') is-invalid @enderror" name="content" id="content" rows="3">{{old('content', $project->content)}}</textarea>
                 <small id="contentHelp" class="form-text">Type your content</small>
