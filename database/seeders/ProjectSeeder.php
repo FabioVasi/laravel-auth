@@ -18,7 +18,9 @@ class ProjectSeeder extends Seeder
         for ($i=0; $i < 10; $i++) { 
             $project = new Project();
             $project->title = $faker->realText(50);
-            $project->image = 'placeholder/' . $faker->image('public/storage/placeholder', category: 'Projects', fullPath: false);
+            $project->image = 'https://picsum.photos/200/300';
+            $project->github = $faker->url();
+            $project->second_link = $faker->url();
             $project->slug = Str::slug($project->title, '-');
             $project->content = $faker->realText(50);
             $project->save();

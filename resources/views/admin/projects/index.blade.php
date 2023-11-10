@@ -11,17 +11,19 @@
 </div>
 @endif
 
-<h1>All Projects Post</h1>
+<h1 class="text-muted text-uppercase py-4">All Projects</h1>
 
 <a href="{{route('admin.projects.create')}}" class="btn btn-primary rounded-pill">Add</a>
 
-<div class="table-responsive-sm">
+<div class="table-responsive-md">
     <table class="table table-striped table-hover table-borderless table-light table-middle">
         <thead class="table-light">
             <caption>Projects Post</caption>
             <tr>
                 <th>ID</th>
                 <th>Image</th>
+                <th>Git Hub</th>
+                <th>Second Link</th>
                 <th>Title</th>
                 <th>Actions</th>
             </tr>
@@ -38,6 +40,8 @@
                     N/A
                     @endif
                 </td>
+                <td><a href="{{$project->github}}"></a></td>
+                <td><a href="{{$project->second_link}}"></a></td>
                 <td>{{$project->title}}</td>
                 <td>
                     <a href="{{route('admin.projects.show', $project)}}" class="btn btn-primary">View</a>

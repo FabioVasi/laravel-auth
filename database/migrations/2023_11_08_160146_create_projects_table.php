@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('title');
             $table->string('slug');
+            $table->string('github')->nullable();
+            $table->string('second_link')->nullable();
             $table->text('content')->nullable();
             $table->timestamps();
         });
