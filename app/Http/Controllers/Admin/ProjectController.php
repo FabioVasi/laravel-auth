@@ -46,7 +46,7 @@ class ProjectController extends Controller
 
         Project::create($val_data);
 
-        return to_route('admin.projects.index')->with('message', 'Project created successfully');
+        return to_route('admin.projects.index')->with('message', ' Project created successfully');
     }
 
     /**
@@ -84,7 +84,7 @@ class ProjectController extends Controller
 
         $project->update($val_data);
 
-        return to_route('admin.projects.index')->with('message', 'Project updated successfully');
+        return to_route('admin.projects.index')->with('message', ' Project updated successfully');
     }
 
     /**
@@ -98,6 +98,6 @@ class ProjectController extends Controller
 
         $project->delete();
 
-        return to_route('admin.projects.index')->with('message', 'Project deleted successfully');
+        return to_route('admin.projects.index')->with('message', ' Project deleted successfully');
     }
 }
